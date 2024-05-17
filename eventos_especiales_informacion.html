@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos_Especiales</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: #2b2929;
+    font-family: 'PT Serif' sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #000;
+    padding: 70px 0;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    color: #FFD700;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.menu .navbar ul li {
+    box-shadow: 0 4px 5px var(--navbar-shalow-color--);
+    position: relative;
+    float: left;
+}
+
+.open-menu,
+.close-menu {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth  ;
+}
+
+section[id] {
+    scroll-margin-top: 70px;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #FFF;
+    display: block;
+}
+
+.menu .navbar ul li a:hover {
+    color: #FFB6C1;
+}
+
+menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu #logo {
+    display: none;
+}
+
+.submenu:hover #logo {
+    display: block;
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur(10px);
+    top: 100%;
+    z-index: 1;
+    background-color: #4E4B5076;
+    padding: 20px;
+    min-width: 400px;
+}
+
+table {
+    width: 100%;
+}
+
+th, th {
+    color: #FFFFFF;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+}
+
+.header-txt {
+    flex-basis: 40%;
+}
+
+.header-txt h1 {
+    font-size: 70px;
+    line-height: 1;
+    color: #FFD700;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+p {
+    color: #FFF;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.events {
+    text-align: center;
+    padding: 100px;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 1;
+    color: #FFB6C1;
+    margin-bottom: 10px;
+}
+
+.events-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.events-1 {
+    flex-basis: calc(30% - 30px);
+    box-shadow: 0 0 20px rgba (0, 0, 0, 0.2);
+    padding: 25px;
+    text-align: center;
+    background-color: #E6E6FA;
+    border-radius: 10px;
+}
+
+.events-1 img {
+    width: 130px;
+    height: 170;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 1;
+    color: #181818;
+    margin-bottom: 10px;
+}
+
+.product-txt p {
+    color: #181818;
+    margin-bottom: 10px;
+}
+
+.precio {
+    color: #FFB6C1;
+    font-weight: 700;
+    margin-bottom: 20;
+}
+
+.events-2 {
+    flex-basis: calc(30% - 30px);
+    box-shadow: 0 0 20px rgba (0, 0, 0, 0.2);
+    padding: 25px;
+    text-align: center;
+    background-color: #E6E6FA;
+    border-radius: 10px;
+}
+
+.events-2 img {
+    width: 130px;
+    height: 170;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 1;
+    color: #181818;
+    margin-bottom: 10px;
+}
+
+.product-txt p {
+    color: #181818;
+    margin-bottom: 10px;
+}
+
+.precio {
+    color: #FFB6C1;
+    font-weight: 700;
+    margin-bottom: 20;
+}
+
+.btn-3 {
+    padding: 4px 20px;
+}
+
+.events-3 {
+    flex-basis: calc(30% - 30px);
+    box-shadow: 0 0 20px rgba (0, 0, 0, 0.2);
+    padding: 25px;
+    text-align: center;
+    background-color: #E6E6FA;
+    border-radius: 10px;
+}
+
+.events-3 img {
+    width: 130px;
+    height: 170;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 1;
+    color: #181818;
+    margin-bottom: 10px;
+}
+
+.product-txt p {
+    color: #181818;
+    margin-bottom: 10px;
+}
+
+.precio {
+    color: #FFB6C1;
+    font-weight: 700;
+    margin-bottom: 20;
+}
+
+.btn-3 {
+    padding: 4px 20px;
+}
+</style>
+
+<body>
+    <header class="header">
+
+        <div class="menu container">
+
+                
+            <nav class="navbar">
+                <button class="open-menu" aria-label="Abrir Menú">
+                    <img src="Imagenes/white-menu-icon-25.jpg" width="30" height="30" alt="Abrir Menú">
+                </button>
+                <ul>
+                    <button class="close-menu" aria-label="Cerrar Menú">
+                        <img src="Imagenes/close_menu.webp" width="30" height="30" alt="Cerrar Menú">
+                    </button>
+                    <li><a href="Pagina_Regalos_y_Novedades_Andy.html">Inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-content container" id="Inicio">
+            <div class="header-txt">
+                <img src="Imagenes/Logo.jpg " width="300" height="230" alt="menu">
+
+                <h1>Eventos Especiales</h1>
+                <h2>Consigue los mejores Regalos.</h2>
+            </div>
+            <div class="header-img">
+                <img src="Imagenes/gift_PNG100156.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <section class="events container" id="lista-1">
+        <h2>¡Bienvenidos a esta sección especial!</h2>
+        <p>
+            Para esas fechas especiales en las que se complica encontrar un buen regalo.
+        </p>
+        <p>
+            ¡Aquí encontraras arreglos personalizados para cualquier ocasión!
+        </p>
+
+        <div class="events-content">
+            <div class="events-1">
+                <img src="Imagenes/Imagen de WhatsApp 2024-05-10 a las 20.48.26_97fb75b3.jpg">
+                <div class="product-txt">
+                    <h3>Caja de Regalo</h3>
+                    <p>Edición Limitada</p>
+                    <p class="precio">$250</p>
+                </div>
+            </div>
+            <div class="events-2">
+                <img src="Imagenes/Imagen de WhatsApp 2024-05-10 a las 20.48.26_bc67c54a.jpg">
+                <div class="product-txt">
+                    <h3>Caja de Regalo Armada</h3>
+                    <p>Edición Especial</p>
+                    <p class="precio">$300</p>
+                </div>
+            </div>
+            <div class="events-3">
+                <img src="Imagenes/Rosas eternas.jpeg">
+                <div class="product-txt">
+                    <h3>Arreglos Personalizados</h3>
+                    <p>Pide un arreglo para cualquier evento</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
